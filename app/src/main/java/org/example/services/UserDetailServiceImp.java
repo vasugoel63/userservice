@@ -49,7 +49,7 @@ public class UserDetailServiceImp implements UserDetailsService {
         String userId = UUID.randomUUID().toString();
         userRepository
                 .save(new UserInfo(userId, userinfodto.getUsername(), userinfodto.getPassword(), new HashSet<>()));
-        userInfoProducer.sendEventToKafka(userinfodto);
+        // userInfoProducer.sendEventToKafka(userinfodto);
         return true;
     }
 

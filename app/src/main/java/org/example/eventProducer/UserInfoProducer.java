@@ -9,18 +9,18 @@ import lombok.Value;
 public class UserInfoProducer {
     // private final KafkaTemplate<String, UserInfoDto> kafkaTemplate;
 
-    @Value("${spring.kafka.topic.name")
-    private String topicName;
+    // @Value("${spring.kafka.topic.name")
+    // private String topicName;
 
-    // @Autowired
-    // UserInfoProducer(KafkaTemplate<String, UserInfoDTO> kafkaTemplate){
-    // this.kafkaTemplate = kafkaTemplate;
+    // // @Autowired
+    // // UserInfoProducer(KafkaTemplate<String, UserInfoDTO> kafkaTemplate){
+    // // this.kafkaTemplate = kafkaTemplate;
+    // // }
+
+    // public void sendEventToKafka(UserInfoDTO userInfoDTO){
+    //     Message<UserInfoDTO> message = MessageBuilder.withPayoad(userInfoDTO)
+    //     .setHeader(KafkaHeaders.TOPIC_NAME).build();
+    //     kafkaTemplate.send(message);
     // }
-
-    public void sendEventToKafka(UserInfoDTO userInfoDTO){
-        Message<UserInfoDTO> message = MessageBuilder.withPayoad(userInfoDTO)
-        .setHeader(KafkaHeaders.TOPIC_NAME).build();
-        kafkaTemplate.send(message);
-    }
 
 }
